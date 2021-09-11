@@ -68,7 +68,7 @@ class MainActivity : BaseActivity() {
     var realUri : Uri? = null
 
     fun openCamera() {
-        val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+        val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE_SECURE)
         createImageUri(newfileName(),"image/jpg")?.let { uri ->
             realUri = uri
             intent.putExtra(MediaStore.EXTRA_OUTPUT, realUri)
